@@ -16,11 +16,7 @@ const User = ({
     return (
         <tr key={_id}>
             <td>{name}</td>
-            <td>
-                {qualities.map((qual) => (
-                    <Quality key={qual._id} {...qual} />
-                ))}
-            </td>
+            <td></td>
             <td>{profession.name}</td>
             <td>{completedMeetings}</td>
             <td>{rate} /5</td>
@@ -30,14 +26,7 @@ const User = ({
                     onClick={() => onToggleBookMark(_id)}
                 />
             </td>
-            <td>
-                <button
-                    onClick={() => onDelete(_id)}
-                    className="btn btn-danger"
-                >
-                    delete
-                </button>
-            </td>
+            <td></td>
         </tr>
     );
 };
