@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 
 const TableBody = ({ data, columns }) => {
     const renderContent = (item, column) => {
+        let itemName = item.name
+        item.name = <Link to={`/users/${item._id}`}>{itemName}</Link>
+        if (item.path === "name") {}
         if (columns[column].component) {
             const component = columns[column].component;
             if (typeof component === "function") {
